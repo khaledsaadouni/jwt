@@ -2,6 +2,7 @@ package com.jwt.jwt.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
@@ -16,12 +17,15 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
+@Builder
 @Table(name = "_user")
 public class User implements UserDetails {
     @Id
     @GeneratedValue
     private Integer id;
-    private LocalDate cohortStartDate;
+//    private LocalDate cohortStartDate;
+
+    private String name;
     private String username;
     private String password;
     @Enumerated(EnumType.STRING)

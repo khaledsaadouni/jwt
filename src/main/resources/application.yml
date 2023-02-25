@@ -1,0 +1,15 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/springjwt
+    username: postgres
+    password: khaled
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop #qu'est ce qu'on va faire a la base de donnee au demmarrage create ou create-drop ou update
+    show-sql: true #lorsqu'on on envoie une requete http est ce que on veut afficher larequete sql
+    properties:
+      hibernate:
+        format_sql: true
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect

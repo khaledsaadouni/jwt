@@ -1,2 +1,4 @@
-package com.jwt.jwt.service;public class UserService {
+package com.jwt.jwt.service;
+
+public class UserService {
 }
